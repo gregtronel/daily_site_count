@@ -1,0 +1,4 @@
+BeautifulSoup==3.2.1
+httplib2==0.10.3
+requests==2.13.0
+numpy
