@@ -13,20 +13,20 @@ In order to set up the dev environment to run this program, you need:
 
 Next, clone the project from github and install the dependencies within a virtualenv:
 
-1. Clone "daily_site_count" from the Git repo:
+1. **Clone "daily_site_count" from the Git repo:**
 + $ cd <path/to/my/project/folder/>
 + $ git clone <https or ssh clone link on github>
 
-2. Set up a clean virtualenv in a dedicated directory:
-  * If one doesn't exist, create a parent directory for all virtualenvs:
+2. **Set up a clean virtualenv in a dedicated directory:**
+* If none exists, create a parent directory for all virtualenvs:
 + $ mkdir ~/venvs
-  * Create a clean "daily_site_count" virtualenv in the parent directory:
+* Create a clean "daily_site_count" virtualenv in the parent directory:
 + $ virtualenv --no-site-packages ~/venvs/venv_daily_count
 
-3. Start the virtualenv:
+3. **Start the virtualenv:**
 + $ source ~/venvs/venv_daily_count/bin/activate
 
-4. Install the dependencies:
+4. **Install the dependencies**:
 + $ pip install -r requirements.txt
 
 Run the program:
