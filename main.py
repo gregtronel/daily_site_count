@@ -173,14 +173,13 @@ def main():
     
     # truncate spreadsheet to only display "ndays" worth of history
     if config['_TRUNCATE_SPREADSHEET']:
-        ndays = 30
-        print "- truncating to keep only the last {} days.".format(ndays)
-        updated_content = truncate_spreadsheet(updated_content, ndays=ndays)
+        print "- truncating to keep only the last {} days.".format(config['ndays'])
+        updated_content = truncate_spreadsheet(updated_content, ndays=config['ndays'])
     
     # dump the updated spreadsheet
     if config['_WRITE_SPREADSHEET']:
-        print "- saving updated spreadsheet."
 	outpath = config['spreadsheet_outpath_latest']
+        print "- saving updated spreadsheet."
         datautil.write_tsv(updated_content, outpath)
 	print "spreadsheet successfully updated and saved in: {}.\n".format(os.path.split(outpath)[0])
         shutil.copy(config['spreadsheet_outpath_latest'], 
